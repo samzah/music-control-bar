@@ -28,6 +28,8 @@ body {
   background-image: linear-gradient(to bottom, #e2e2e2, #ccc);
   text-align: center;
   color: #333;
+  position: relative;
+  width: 100%;
 }
 
 .song {
@@ -40,14 +42,14 @@ body {
   font-size: .8rem;
   margin: 0;
   color: #666;
+  max-height: 100%;
 }
 
 .album {
-
-}
-
-.time {
-
+  position: absolute;
+  width: 50px;
+  top: 0;
+  left: 0;
 }
 
 .time-bar {
@@ -58,6 +60,10 @@ body {
   -moz-appearance: none;
   border: 0;
   background-color: #aaa;
+  width: calc( 100% - 50px);
+  position: absolute;
+  right:0;
+  bottom: 0;
 }
 
 /*
@@ -67,6 +73,7 @@ body {
 
 .time-bar::-moz-progress-bar {
   background-color: #666;
+
 }
 
 .time-bar::-webkit-progress-value {
@@ -77,29 +84,44 @@ body {
 
 .time-lapsed {
   font-size: .7rem;
+  position: absolute;
+  bottom: 10px;
+  left: 60px;
 }
 
 .time-total {
   font-size: .7rem;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
 }
 
 .controls {
   margin: 0;
   padding: 0;
   color: #666;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   line-height: 16px;
   list-style-type: none;
 }
 
 .control-shuffle {
+  position: absolute;
+  top: 0;
+  left: 60px;
 
 }
 
 .control-list {
+  position: absolute;
+  top: 0;
+  right: 0;
 
 }
 
 .control-heart {
+  position: absolute;
+  top: 0;
+  right: 30px;
 
 }
